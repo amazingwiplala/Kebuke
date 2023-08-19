@@ -1,0 +1,634 @@
+{
+    "store": "kebuke",
+    "items": [
+        {
+            "id":1,
+            "name":"熟成紅茶",
+            "category":["經典熟成"],
+            "brief":"解炸物/燒烤肉類油膩，茶味濃郁帶果香",
+            "introduction":"木質帶熟果香調的風味，流露熟齡男子的沈穩氣息，低調而迷人。嚴選自斯里蘭卡產區之茶葉，帶有濃郁果香及醇厚桂圓香氣；與肉類料理一同品嚐，得以化解舌尖上所殘留的油膩感。",
+            "reveal":[
+                "中杯：總糖量45克，總熱量180大卡，咖啡因總含量介於101mg至200mg。",
+                "大杯：總糖量50克，總熱量200大卡，咖啡因總含量大於等於201mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":35 },
+                { "size":"L","price":40 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":2,
+            "name":"麗春紅茶",
+            "category":["經典熟成"],
+            "brief":"去除海鮮羶腥，茶味較淡帶花香",
+            "introduction":"淡雅輕盈的花香調，可比嬌豔欲滴的罌粟紅花，散發名門閨秀的氣質，優雅而令人傾心。取自罕見的斯里蘭卡中高海拔產區茶葉，帶清爽孤傲的花香；搭配海鮮料理享用，為中和腥羶味的首選。",
+            "reveal":[
+                "中杯：總糖量45克，總熱量180大卡，咖啡因總含量介於101mg至200mg。",
+                "大杯：總糖量50克，總熱量200大卡，咖啡因總含量介於101mg至200mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":35 },
+                { "size":"L","price":40 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":3,
+            "name":"胭脂紅茶",
+            "category":["經典熟成"],
+            "brief":"絲絨般的蜜桃果香",
+            "introduction":"恬淡的果香調與一抹蜜桃風味，伴隨玫瑰與茉莉花香的情蜜纏綿，好似唇抹胭脂的綺麗女子。清新的紅茶如髮簪鑲嵌的金絲紋理，將60年代華洋集於一身的氛圍，化為迷人的戀舊意識。",
+            "reveal":[
+                "中杯：總糖量45克，總熱量180大卡，咖啡因總含量介於101毫克至200毫克。",
+                "大杯：總糖量50克，總熱量200大卡，咖啡因總含量大於等於201毫克。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":45 },
+                { "size":"L","price":50 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":4,
+            "name":"雪藏紅茶",
+            "category":["經典熟成"],
+            "brief":"冰淇淋與紅茶的綿綿情意",
+            "introduction":"白雪融於紅茶中而蔓延，厚實的茶韻與冰淇淋的奶甜相互交織，逐漸化開成香濃醇和的奶茶。綿綿情意浸潤於唇齒之間，響起一首苦情男女的老歌，花落紅塵的情感交雜，勾人心魂的萬千情愫。",
+            "reveal":[
+                "中杯: 總糖量 54 克, 總熱量 319 大卡, 咖啡因總含量小於等於 100 毫克。",
+                "大杯: 總糖量 66 克, 總熱量 419 大卡, 咖啡因總含量介於 101 毫克至 200 毫克。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":55 },
+                { "size":"L","price":65 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false },
+                { "level":7,"valid":false },
+                { "level":8,"valid":false }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":5,
+            "name":"春芽綠茶",
+            "category":["經典熟成"],
+            "brief":"綠茶，系系中帶點彔彔",
+            "introduction":"縱身綠叢、提筆描繪的青山少年，在春滿四溢的山林中擁抱自然、探索枝芽於舌尖的渴望。萃取自台灣綠茶，蘊含繁茂枝葉所飽存的風土，初嚐甘甜圓潤與低苦澀，青翠欲滴即不絕於口。",
+            "reveal":[
+                "中杯：總糖量40克，總熱量160大卡，咖啡因總含量介於101mg至200mg。",
+                "大杯：總糖量45克，總熱量180大卡，咖啡因總含量大於等於201mg。"
+            ],
+            "place":"春芽茶葉產地：台灣南投。",
+            "price":[
+                { "size":"M","price":35 },
+                { "size":"L","price":40 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":6,
+            "name":"冷露檸果",
+            "category":["人氣精選","清甜冷露","爽冽檸果"],
+            "brief":"古法熬煮冬瓜與整顆鮮切檸檬",
+            "introduction":"將整顆新鮮檸檬的酸爽清香，浸入古法熬煮的冬瓜，以果香勾勒甘醇，沁入喉間之際，交織出別於以往的經典組合，令人一再回味。",
+            "tips":"不另外加糖，飲品本身含有冬瓜甜度。",
+            "reveal":[
+                "中杯：總糖量41g，總熱量：190大卡，咖啡因總含量為0。",
+                "大杯：總糖量57g，總熱量：261大卡，咖啡因總含量為0。 "
+            ],
+            "price":[
+                { "size":"M","price":60 },
+                { "size":"L","price":70 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false },
+                { "level":7,"valid":false },
+                { "level":8,"valid":false }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":false },
+                { "level":2,"valid":false },
+                { "level":3,"valid":false },
+                { "level":4,"valid":false },
+                { "level":5,"valid":false },
+                { "level":6,"valid":true }
+            ]
+        },{
+            "id":7,
+            "name":"雪花冷露",
+            "category":["清甜冷露"],
+            "brief":"手工冬瓜獨奏",
+            "introduction":"出於精煉的冬瓜，經歲月的火侯，成就獨有的韻味及香氣，彷彿古厝裡安然自得、望著懷舊時鐘的老奶奶，一會兒迎著藺草扇起的微風、配著收音機，享受溫煦的午後人生。",
+            "tips":"飲品本身含有冬瓜甜度。可選擇減糖方式為添加50c.c.的春芽綠茶。",
+            "reveal":[
+                "中杯：總糖量40克，總熱量169大卡，咖啡因總含量為0。如甜度選擇減糖方式，咖啡因總含量小於等於100mg。",
+                "大杯：總糖量55克，總熱量233大卡，咖啡因總含量為0。如甜度選擇減糖方式，咖啡因總含量小於等於100mg。"
+            ],
+            "place":"春芽茶葉產地：台灣南投。",
+            "price":[
+                { "size":"M","price":35 },
+                { "size":"L","price":40 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":false },
+                { "level":2,"valid":false },
+                { "level":3,"valid":false },
+                { "level":4,"valid":false },
+                { "level":5,"valid":false },
+                { "level":6,"valid":true }
+            ]
+        },{
+            "id":8,
+            "name":"熟成冷露",
+            "category":["清甜冷露"],
+            "brief":"手工冬瓜與茶更神秘比例搭配",
+            "introduction":"冬瓜與紅茶的極致特調，慢火入味的冬瓜香氣將清沁滑順的紅茶帶入另一種層次。回憶起於雨煙橋下抽著煙斗、曾經年少的阿公，在舊識中迂迴的嫵媚，作為生活與樸實的調和劑。",
+            "tips":"飲品無糖含有冬瓜甜度。",
+            "reveal":[
+                "中杯：總糖量33克，總熱量135大卡，咖啡因總含量介於101mg至200mg。",
+                "大杯：總糖量52克，總熱量211大卡，咖啡因總含量介於101mg至200mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":35 },
+                { "size":"L","price":40 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":false },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":9,
+            "name":"春芽冷露",
+            "category":["清甜冷露"],
+            "brief":"手工冬瓜綠茶",
+            "introduction":"春芽冷露是一股耐人尋味的質感，如同愛好茶酒和詩詞的阿伯。冬瓜陳年的尾韻，於茶葉清甜圓潤的餘韻下回甘，兩者所釋放的渾厚香氣，尋尋覓覓使人意猶未盡，適合與文學一同啜飲。",
+            "tips":"飲品無糖含有冬瓜甜度。",
+            "reveal":[
+                "中杯：總糖量33克，總熱量135大卡，咖啡因總含量介於101mg至200mg。",
+                "大杯：總糖量52克，總熱量211大卡，咖啡因總含量介於101mg至200mg。"
+            ],
+            "place":"春芽茶葉產地：台灣南投。",
+            "price":[
+                { "size":"M","price":35 },
+                { "size":"L","price":40 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":false },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":10,
+            "name":"冷露歐蕾",
+            "category":["清甜冷露","濃醇歐蕾"],
+            "brief":"手工冬瓜與鮮奶",
+            "introduction":"冬瓜與濃醇鮮奶一絲一著、輕巧地流露於唇齒間，雅緻的氣味宛如裁縫女子手中的針線，絲絲入扣地編織交纏，飲啜之間伴隨期盼歸來的情感，一股熟悉的奶香與甜香。",
+            "tips":"飲品本身含有冬瓜甜度。可選擇減糖方式為添加50c.c.的春芽綠茶。",
+            "reveal":[
+                "中杯：總糖量27克，總熱量116大卡，咖啡因總含量為0。如甜度選擇減糖方式，咖啡因總含量小於等於100mg。",
+                "大杯：總糖量38克，總熱量162大卡，咖啡因總含量為0。如甜度選擇減糖方式，咖啡因總含量小於等於100mg。"
+            ],
+            "price":[
+                { "size":"M","price":50 },
+                { "size":"L","price":60 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":false },
+                { "level":2,"valid":false },
+                { "level":3,"valid":false },
+                { "level":4,"valid":false },
+                { "level":5,"valid":false },
+                { "level":6,"valid":true }
+            ]
+        },{
+            "id":11,
+            "name":"熟成歐蕾",
+            "category":["濃醇歐蕾"],
+            "brief":"熟成鮮奶茶",
+            "introduction":"渲染漸變的茶色，猶如街頭嬉皮風趣的男子，口中恣意地哼著音階。濃郁的紅茶香，本是味覺記憶中的絕品，與溫順甘醇的鮮奶兩相平衡，為奶茶的底蘊更添一股味蕾衝擊，絲滑細膩使人覺醒。",
+            "tips":"如欲購買珍珠鮮奶茶，請訂購白玉歐蕾。",
+            "reveal":[
+                "中杯：總糖量47克，總熱量258大卡，咖啡因總含量大於等於201mg。",
+                "大杯：總糖量55克，總熱量311大卡，咖啡因總含量大於等於201mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":50 },
+                { "size":"L","price":60 }
+            ],
+            "addon":[
+                { "level":0,"valid":false },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":12,
+            "name":"白玉歐蕾",
+            "category":["人氣精選","濃醇歐蕾"],
+            "brief":"白玉珍珠鮮奶茶。",
+            "introduction":"台灣手搖飲不可或缺的經典——珍珠鮮奶茶。軟嫩嚼感的白玉珍珠，恰似摩登女子的珍珠首飾，以奢華感獨領風潮。與熟成歐蕾完美結合，口感厚實而層次豐富，是一場難以忘懷的味覺饗宴。",
+            "reveal":[
+                "中杯：總糖量42克，總熱量439大卡，咖啡因總含量小於等於100mg。",
+                "大杯：總糖量50克，總熱量492大卡，咖啡因總含量介於101mg至200mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":60 },
+                { "size":"L","price":70 }
+            ],
+            "addon":[
+                { "level":0,"valid":false },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":true },
+                { "level":7,"valid":true },
+                { "level":8,"valid":true }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":13,
+            "name":"熟成檸果",
+            "category":["人氣精選","爽冽檸果"],
+            "brief":"每日限量的鮮檸紅茶，整顆檸檬搭配7分糖最佳",
+            "introduction":"如同愛情小品中的少女，帶著初戀的羞澀與心上人赴約，配上酸甜濃郁的檸檬蛋糕，在靦腆的午後時光綻放少女情懷。整顆新鮮檸檬浸漬於茶中，輕盈爽口而純淨，不多不少7分糖，甜意、情意剛剛好。",
+            "reveal":[
+                "中杯：總糖量38克，總熱量168大卡，咖啡因總含量介於101mg至200mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":60 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false },
+                { "level":7,"valid":false },
+                { "level":8,"valid":false }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":14,
+            "name":"芒果波登",
+            "category":["盛夏新品","人氣精選"],
+            "brief":"芒果波登結合花果香調的麗春紅茶與檸檬的酸蜜交織",
+            "introduction":"以獨創的冰凌技術，並使用新鮮芒果再造波登，搭配鮮切檸檬注入一股清新，猶如令人神魂顛倒卻難以言喻的關係，好比這個夏季，需要來場long trip，綻放我的fantasy。",
+            "tips":"＊本產品含有芒果，不適合對其過敏體質者食用。＊無糖僅含芒果醬甜度，請搖勻後再飲用。",
+            "reveal":[
+                "中杯：總糖量35g，總熱量151大卡，咖啡因總含量小於等於100mg。",
+                "大杯：總糖量44g，總熱量190大卡，咖啡因總含量介於101mg至200mg。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":75 },
+                { "size":"L","price":85 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":false },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":false },
+                { "level":5,"valid":false },
+                { "level":6,"valid":false },
+                { "level":7,"valid":false },
+                { "level":8,"valid":false }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":15,
+            "name":"麥雪歐蕾",
+            "category":["盛夏新品","人氣精選","濃醇歐蕾"],
+            "brief":"燕麥奶冰淇淋與歐蕾的纏綿雙享樂",
+            "introduction":"使用Oatly燕麥奶再創經典新作，調製成濃醇細緻的冰淇淋，配上歐蕾尾韻的熟成茶香，纏綿交織後的風味如同一陣舒適的微風輕拂而過，將會是這個夏日令人難以忘懷的獨家記憶。",
+            "tips":"本產品含有麩質及鮮奶，不適合對其過敏體質者食用。無糖僅含冰淇淋甜度, 請搖勻再飲用。",
+            "reveal":[
+                "中杯總糖量 38 克, 總熱量 316 大卡, 咖啡因總含量介於 101 毫克至 200 毫克。",
+                "大杯總糖量 52 克, 總熱量 344 大卡，咖啡因總含量介於 101 毫克至 200 毫克。"
+            ],
+            "place":"紅茶茶葉產地為斯里蘭卡。",
+            "price":[
+                { "size":"M","price":80 },
+                { "size":"L","price":90 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":false },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false },
+                { "level":7,"valid":false },
+                { "level":8,"valid":false }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        },{
+            "id":16,
+            "name":"胭脂多多",
+            "category":["盛夏新品","人氣精選"],
+            "brief":"蜜桃裡的兒時記憶",
+            "introduction":"以粉色水蜜桃呼應擁有美妙歌聲的「胖丁」角色，蜜桃韻味為基底的胭脂紅茶，加入酸甜滋味恰如其分的養樂多，勾起甜而不膩的兒時回憶，伴隨著玫瑰與茉莉花香的恬淡，如同陶醉沈浸於純淨的音符之中，如初而美好。",
+            "reveal":[
+                "中杯：總糖量84克，總熱量355大卡，咖啡因總含量介於101毫克至200毫克。",
+                "大杯：總糖量105克，總熱量453大卡，咖啡因總含量介於101毫克至200毫克。"
+            ],
+            "place":"紅茶茶葉產地：斯里蘭卡。",
+            "price":[
+                { "size":"M","price":50 },
+                { "size":"L","price":60 }
+            ],
+            "addon":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true }
+            ],
+            "temperature":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false },
+                { "level":7,"valid":false },
+                { "level":8,"valid":false }
+            ],
+            "sugar":[
+                { "level":0,"valid":true },
+                { "level":1,"valid":true },
+                { "level":2,"valid":true },
+                { "level":3,"valid":true },
+                { "level":4,"valid":true },
+                { "level":5,"valid":true },
+                { "level":6,"valid":false }
+            ]
+        }
+    ]
+}
