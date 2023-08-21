@@ -69,9 +69,9 @@ class OrderTableViewController: UITableViewController {
     @IBAction func confirmDeleteOrder(_ sender: UIButton) {
         let point = sender.convert(CGPoint.zero, to: tableView)
             if let indexPath = tableView.indexPathForRow(at: point) {
-                print(indexPath.row)
-                print(orderRecords[indexPath.row].id)
-                print(orderRecords[indexPath.row].fields.customer)
+                //print(indexPath.row)
+                //print(orderRecords[indexPath.row].id)
+                //print(orderRecords[indexPath.row].fields.customer)
                 let deleteField = Field(id: orderRecords[indexPath.row].id, fields: orderRecords[indexPath.row].fields)
                 confirmDelete(deleteField)
         }
@@ -148,7 +148,7 @@ class OrderTableViewController: UITableViewController {
                     let decoder = JSONDecoder()
                     do {
                         let orderGet = try decoder.decode(OrderGet.self, from: data)
-                        print(orderGet)
+                        //print(orderGet)
                         self.orderRecords = orderGet.records
                         DispatchQueue.main.async {
                             self.OrderTableView.reloadData()
@@ -169,6 +169,8 @@ class OrderTableViewController: UITableViewController {
     
     //設定總數
     func calculateTotal(){
+        totalCupCount = 0
+        totalPayPrice = 0
         for record in orderRecords {
             totalCupCount += record.fields.drinkCount
             totalPayPrice += record.fields.totalPrice

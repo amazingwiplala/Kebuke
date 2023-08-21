@@ -237,8 +237,7 @@ class DetailViewController: UIViewController {
         let attrTitle = NSAttributedString(string: buttonText, attributes: [NSAttributedString.Key.font: attrFont])
         addToCart.setAttributedTitle(attrTitle, for: UIControl.State.normal)
         
-        print(buttonText)
-        
+        /*
         //飲料選擇
         print("selectedSize=\(selectedSize)")                  //容量
         print("selectedTemperature=\(selectedTemperature)")    //溫度
@@ -251,7 +250,7 @@ class DetailViewController: UIViewController {
         print("addAgarPearlPrice=\(addAgarPearlPrice)")          //加料水玉價格
         
         print("=====================")
-        
+        */
     }
     
     // MARK: - Data

@@ -221,8 +221,8 @@
             filePath = "Kebuke/Controller/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "490"
-            endingLineNumber = "490"
+            startingLineNumber = "489"
+            endingLineNumber = "489"
             landmarkName = "uploadOrder(_:)"
             landmarkType = "7">
          </BreakpointContent>

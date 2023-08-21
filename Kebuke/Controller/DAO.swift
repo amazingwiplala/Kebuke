@@ -16,7 +16,7 @@ class DAO{
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.setValue("Bearer patb1q4Gb5wLdwaRC.00f6550bf2189fe9eef459124964a3f87c688809342132436cd5d3f151ea96e0", forHTTPHeaderField: "Authorization")
         let updateBody = try! JSONEncoder().encode(orderPost)
-        print(String(data: updateBody, encoding: .utf8)!)
+        //print(String(data: updateBody, encoding: .utf8)!)
         urlRequest.httpBody = updateBody
 
         URLSession.shared.dataTask(with: urlRequest) {
@@ -40,7 +40,7 @@ class DAO{
         let queryItem = removes.map { URLQueryItem(name: "records[]", value: $0.id)  }
         urlComponent?.queryItems = queryItem
         if let url = urlComponent?.url{
-            print(url.absoluteString)
+            //print(url.absoluteString)
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "DELETE"
             urlRequest.setValue("Bearer patb1q4Gb5wLdwaRC.00f6550bf2189fe9eef459124964a3f87c688809342132436cd5d3f151ea96e0", forHTTPHeaderField: "Authorization")
@@ -49,7 +49,7 @@ class DAO{
                 data, response, error
                 in
                 if let data{
-                    print(String(data: data, encoding: .utf8)!)
+                    //print(String(data: data, encoding: .utf8)!)
                     do{
                         let content = try JSONDecoder().decode(Records.self, from: data)
                         completion(.success(content))
