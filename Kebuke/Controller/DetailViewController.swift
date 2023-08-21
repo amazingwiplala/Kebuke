@@ -216,7 +216,7 @@ class DetailViewController: UIViewController {
             drinkSugar: sugars[selectedSugar].rawValue,
             addWhiteTapioca: addWhiteTapiocaPrice>0 ? "加白玉＄\(addWhiteTapiocaPrice)" : "" ,
             addAgarPearl: addAgarPearlPrice>0 ? "加水玉＄\(addAgarPearlPrice)" : "",
-            drinkCount: cupCount, drinkPrice: selectedSizePrice, totalPrice: (selectedSizePrice*cupCount+addWhiteTapiocaPrice+addAgarPearlPrice),
+            drinkCount: cupCount, drinkPrice: selectedSizePrice, totalPrice: ((selectedSizePrice+addWhiteTapiocaPrice+addAgarPearlPrice)*cupCount),
             orderTime: "")
         
         confirmOrder(order)
