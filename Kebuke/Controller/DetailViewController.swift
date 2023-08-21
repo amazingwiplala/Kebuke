@@ -15,10 +15,10 @@ let UnSelectedColor = UIColor.white
 
 class DetailViewController: UIViewController {
     
-    var cart: Cart
+    var drink: Drink
     
-    init?(coder: NSCoder, cart: Cart) {
-        self.cart = cart
+    init?(coder: NSCoder, drink: Drink) {
+        self.drink = drink
         super.init(coder: coder)
     }
     
@@ -29,6 +29,8 @@ class DetailViewController: UIViewController {
     //var cartTest = Cart(name: "芒果波登", size: "L", temperature: 2, sugar: 3, selectedSizePrice: 75, addWhiteTapiocaPrice: 10, addAgarPearlPrice: 0, cupCount: 1, unitPrice: 85, total: 85)
     
     var item:Menu = Menu(name: "", category: [], brief: "", introduction: "", tips: "", reveal: [], place: "", price: [], addon: [], temperature: [], sugar: [])
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     //飲料選擇
     var selectedSize:String = ""        //容量
@@ -76,13 +78,12 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         initAll()
-        
-        
+
     }
     
     func initAll(){
-        print(cart.name)
-        searchMenuByName(cart.name)
+
+        searchMenuByName(drink.name)
     
         initImage()
         initNavigationBar()
@@ -182,32 +183,54 @@ class DetailViewController: UIViewController {
         //容量
         if selectedSize == "" {
             validAlert("請問您要中杯還是大杯？")
+            scrollView.contentOffset = CGPoint(x: 0, y: 400)
             return
         }
         //溫度
         if selectedTemperature == -1 {
             validAlert("請選擇飲料的溫度！")
+            scrollView.contentOffset = CGPoint(x: 0, y: 600)
             return
         }
         //甜度
         if selectedSugar == -1 {
             validAlert("請選擇甜度！")
+            scrollView.contentOffset = CGPoint(x: 0, y: 1050)
             return
         }
         //杯數
         if cupCount == 0 {
             validAlert("請至少點一杯喔！")
+            scrollView.contentOffset = CGPoint(x: 0, y: 1050)
             return
         }
+        
+        //訂單
+        var sizeString = Size.M.rawValue
+        if selectedSize=="L" {
+            sizeString = Size.L.rawValue
+        }
+        var order = Order(
+            customer: "", drinkName: drink.name, drinkSize: sizeString,
+            drinkTemperature: temperatures[selectedTemperature].rawValue,
+            drinkSugar: sugars[selectedSugar].rawValue,
+            addWhiteTapioca: addWhiteTapiocaPrice>0 ? "加白玉＄\(addWhiteTapiocaPrice)" : "" ,
+            addAgarPearl: addAgarPearlPrice>0 ? "加水玉＄\(addAgarPearlPrice)" : "",
+            drinkCount: cupCount, drinkPrice: selectedSizePrice, totalPrice: (selectedSizePrice*cupCount),
+            orderTime: "")
+        
+        confirmOrder(order)
     }
     
     
     // MARK: - Functions
     
+    let temperatures = Temperature.allCases
+    let sugars = Sugar.allCases
     //更新訂單
     func updateOrder(){
         
-        //加入購物車
+        //加入購物車按鈕
         let total = cupCount * ( selectedSizePrice + addWhiteTapiocaPrice + addAgarPearlPrice )
         let buttonText:String = "新增\(cupCount)杯。共\(total)元"
         let attrFont = UIFont.systemFont(ofSize: 18, weight: .bold)
@@ -217,15 +240,15 @@ class DetailViewController: UIViewController {
         print(buttonText)
         
         //飲料選擇
-        print("selectedSize=\(selectedSize)")           //容量
+        print("selectedSize=\(selectedSize)")                  //容量
         print("selectedTemperature=\(selectedTemperature)")    //溫度
-        print("selectedSugar=\(selectedSugar)")        //甜度
-        print("cupCount=\(cupCount)")              //杯數
+        print("selectedSugar=\(selectedSugar)")                //甜度
+        print("cupCount=\(cupCount)")                          //杯數
         
         //飲料價格
         print("selectedSizePrice=\(selectedSizePrice)")
         print("addWhiteTapiocaPrice=\(addWhiteTapiocaPrice)")    //加料白玉價格
-        print("addAgarPearlPrice=\(addAgarPearlPrice)")      //加料水玉價格
+        print("addAgarPearlPrice=\(addAgarPearlPrice)")          //加料水玉價格
         
         print("=====================")
         
@@ -345,41 +368,41 @@ class DetailViewController: UIViewController {
     //飲料選擇-初始化
     func initSelect(){
         //容量
-        if cart.size == "M" {
+        if drink.size == "M" {
             SizeMButton.configuration?.background.backgroundColor = SelectedColor
-        }else if cart.size == "L" {
+        }else if drink.size == "L" {
             SizeLButton.configuration?.background.backgroundColor = SelectedColor
         }
         //加料-白玉
-        if cart.addWhiteTapiocaPrice > 0 {
+        if drink.addWhiteTapiocaPrice > 0 {
             AddOnSwitch[0].isOn = true
         }
         //加料-水玉
-        if cart.addAgarPearlPrice > 0 {
+        if drink.addAgarPearlPrice > 0 {
             AddOnSwitch[1].isOn = true
         }
         //溫度
         for button in TemperatureButton {
-            if button.tag % 20 == cart.temperature {
+            if button.tag % 20 == drink.temperature {
                 button.configuration?.background.backgroundColor = SelectedColor
             }
         }
         //甜度
         for button in SugarButton {
-            if button.tag % 20 == cart.sugar {
+            if button.tag % 20 == drink.sugar {
                 button.configuration?.background.backgroundColor = SelectedColor
             }
         }
         //飲料選擇
-        selectedSize = cart.size           //容量
-        selectedTemperature = cart.temperature   //溫度
-        selectedSugar = cart.sugar         //甜度
-        cupCount = cart.cupCount                //杯數
+        selectedSize = drink.size           //容量
+        selectedTemperature = drink.temperature   //溫度
+        selectedSugar = drink.sugar         //甜度
+        cupCount = drink.cupCount                //杯數
         
         //飲料價格
-        selectedSizePrice = cart.selectedSizePrice
-        addWhiteTapiocaPrice = cart.addWhiteTapiocaPrice    //加料白玉價格
-        addAgarPearlPrice = cart.addAgarPearlPrice       //加料水玉價格
+        selectedSizePrice = drink.selectedSizePrice
+        addWhiteTapiocaPrice = drink.addWhiteTapiocaPrice    //加料白玉價格
+        addAgarPearlPrice = drink.addAgarPearlPrice       //加料水玉價格
         
         updateOrder()
     }
@@ -402,10 +425,86 @@ class DetailViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    // MARK: - 新增訂單
+    //對話框 - 確認訂單
+    func confirmOrder(_ order:Order){
+        var message:String = ""
+        message.append(order.drinkName + "\n")
+        message.append(order.drinkSize + "\n")
+        message.append(order.drinkTemperature + "\n")
+        message.append(order.drinkSugar + "\n")
+        if let addWhiteTapioca = order.addWhiteTapioca, !addWhiteTapioca.isEmpty {
+            message.append(addWhiteTapioca + "\n")
+        }
+        if let addAgarPearl = order.addAgarPearl, !addAgarPearl.isEmpty {
+            message.append(addAgarPearl + "\n")
+        }
+        message.append("\(order.drinkCount)杯，共\(order.totalPrice)元")
+        
+        let alert = UIAlertController(title: "確認訂單", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.prepareUpload(order)
+          }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+          print("Handle Cancel Logic here")
+          }))
+
+        present(alert, animated: true, completion: nil)
+    }
     
+    //對話框 - 輸入姓名 ＆ 送出訂單
+    func prepareUpload(_ order:Order){
+        let alert = UIAlertController(title: "送出訂單", message: "請輸入您的暱稱：", preferredStyle: .alert)
+        alert.addTextField { textField in
+           //textField.placeholder = ""
+           //textField.keyboardType = UIKeyboardType
+        }
+        let okAction = UIAlertAction(title: "確認", style: .default) { [unowned alert] _ in
+            let customer = alert.textFields?[0].text
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let orderTime = formatter.string(from: Date())
+            //print(customer, orderTime)
+            let newOrder = Order(customer: customer ?? "", drinkName: order.drinkName, drinkSize: order.drinkSize, drinkTemperature: order.drinkTemperature, drinkSugar: order.drinkSugar, addWhiteTapioca: order.addWhiteTapioca, addAgarPearl: order.addAgarPearl, drinkCount: order.drinkCount, drinkPrice: order.drinkPrice, totalPrice: order.totalPrice, orderTime: orderTime)
+            
+            //送出訂單
+            self.uploadOrder(newOrder)
+            
+        }
+        alert.addAction(okAction)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
     
-    
-    
+    //上傳airTable
+    func uploadOrder(_ order:Order){
+        //上傳Order
+        let urlString = "https://api.airtable.com/v0/app5ch3HNjdIRzUUp/kebuke"
+        let orderPost = OrderPost(records: [Field(fields: order)])
+        DAO.shared.uploadOrder(url: urlString, orderPost: orderPost) {
+            result
+            in
+            switch result{
+            case .success(let response):
+                let alert = UIAlertController(title: "訂購結果", message: "成功！", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default){_ in
+                    //返回List
+                    self.performSegue(withIdentifier: "backToList", sender: nil)
+                }
+                alert.addAction(alertAction)
+                
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true)
+                }
+                print("上傳成功後回傳的response：\(response)")
+                
+            case .failure(let error):
+                print("上傳失敗回傳的response:\(error)")
+            }
+        }
+        
+    }
     
     
 

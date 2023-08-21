@@ -1,42 +1,23 @@
 //
-//  Drink.swift
+//  Cart.swift
 //  Kebuke
 //
-//  Created by Jeanine Chuang on 2023/8/16.
+//  Created by Jeanine Chuang on 2023/8/19.
 //
 
 import Foundation
 
-struct ResultMenu:Codable {
-    let store:String
-    let items:[Menu]
+//個人飲品
+struct Drink {
+    let name:String             //品項
+    let size:String             //容量
+    let temperature:Int         //溫度
+    let sugar:Int               //甜度
+    let selectedSizePrice:Int   //飲料錢
+    let addWhiteTapiocaPrice:Int//加白玉錢
+    let addAgarPearlPrice:Int   //加水玉錢
+    let cupCount:Int    //杯數
+    let unitPrice:Int   //單價
+    let total:Int       //小計
 }
-
-//菜單
-struct Menu:Codable {
-    let name:String         //名稱
-    let category:[String]   //類別
-    let brief:String        //簡介
-    let introduction:String //說明
-    let tips:String?        //特色
-    let reveal:[String]     //揭示
-    let place:String?        //產地
-    let price:[Price]       //容量+價格
-    let addon:[Option]       //加料選項
-    let temperature:[Option]//溫度選項
-    let sugar:[Option]      //糖度選項
-}
-//容量+價格
-struct Price:Codable {
-    let size:String //中杯、大杯
-    let price:Int
-}
-//選單
-struct Option:Codable {
-    let level:Int
-    let valid:Bool
-}
-
-
-
 

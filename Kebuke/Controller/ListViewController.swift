@@ -144,41 +144,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight/3
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
     // MARK: - Actions
     //點選DM
@@ -187,8 +152,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         if indexDM == 1 || indexDM == 4 {
             name = "麥雪歐蕾"
         }
-        let cart = Cart(name: name, size: "", temperature: -1, sugar: -1, selectedSizePrice: 0, addWhiteTapiocaPrice: 0, addAgarPearlPrice: 0, cupCount: 1, unitPrice: 0, total: 0)
-        return DetailViewController(coder: coder, cart: cart)
+        let drink = Drink(name: name, size: "", temperature: -1, sugar: -1, selectedSizePrice: 0, addWhiteTapiocaPrice: 0, addAgarPearlPrice: 0, cupCount: 1, unitPrice: 0, total: 0)
+        return DetailViewController(coder: coder, drink: drink)
     }
     //點選List
     @IBSegueAction func showDetail(_ coder: NSCoder) -> DetailViewController? {
@@ -198,12 +163,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let menu = getMenuByCategory(categoryIndex: sectionIndex, menuIndex: row)
             
-            let cart = Cart(name: menu.name, size: "", temperature: -1, sugar: -1, selectedSizePrice: 0, addWhiteTapiocaPrice: 0, addAgarPearlPrice: 0, cupCount: 1, unitPrice: 0, total: 0)
-            return DetailViewController(coder: coder, cart: cart)
+            let drink = Drink(name: menu.name, size: "", temperature: -1, sugar: -1, selectedSizePrice: 0, addWhiteTapiocaPrice: 0, addAgarPearlPrice: 0, cupCount: 1, unitPrice: 0, total: 0)
+            return DetailViewController(coder: coder, drink: drink)
             
         } else {
             return nil
         }
+    }
+    
+    //從Detail返回
+    @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
+        print("Unwind to Root View Controller")
     }
     
     // MARK: - Data
