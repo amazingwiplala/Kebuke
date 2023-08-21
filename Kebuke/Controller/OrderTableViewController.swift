@@ -13,8 +13,12 @@ class OrderTableViewController: UITableViewController {
     @IBOutlet weak var TotalPayPriceLabel: UILabel!
     @IBOutlet var OrderTableView: UITableView!
     
+    @IBOutlet weak var StillLoadingIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.StillLoadingIndicator.isHidden = false
+        StillLoadingIndicator.startAnimating()
         initUI()
         fetchOrders()
     }
@@ -149,6 +153,8 @@ class OrderTableViewController: UITableViewController {
                         DispatchQueue.main.async {
                             self.OrderTableView.reloadData()
                             self.calculateTotal()
+                            self.StillLoadingIndicator.stopAnimating()
+                            self.StillLoadingIndicator.isHidden = true
                         }
                         
                     } catch {

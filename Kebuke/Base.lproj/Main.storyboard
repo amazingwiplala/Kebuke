@@ -1089,6 +1089,10 @@
                                     <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DAB-9v-u5F">
+                                    <rect key="frame" x="176" y="2" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="共" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLL-PE-QbR">
                                     <rect key="frame" x="47" y="9" width="23" height="27"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1231,6 +1235,7 @@
                     <navigationItem key="navigationItem" id="fsT-rd-qrr"/>
                     <connections>
                         <outlet property="OrderTableView" destination="7qy-ES-Hvz" id="D6x-RC-qWG"/>
+                        <outlet property="StillLoadingIndicator" destination="DAB-9v-u5F" id="1Mp-We-Hvj"/>
                         <outlet property="TotalCupCountLabel" destination="c9x-DM-9aL" id="VKk-Sw-UD7"/>
                         <outlet property="TotalPayPriceLabel" destination="KEo-Op-sYZ" id="vDv-Zc-o4O"/>
                     </connections>
